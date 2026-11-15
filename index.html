@@ -42,7 +42,7 @@ body.fs .hsb{display:block}
 #right{grid-area:cd;background:var(--card);padding:26px 20px 72px;display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:8px 18px;align-content:start;transition:background .4s}
 .hd{grid-column:1;min-width:0}
 #ren{font-size:11px;font-weight:500;letter-spacing:.18em;color:var(--mute);text-transform:uppercase}
-#rname{font-size:30px;line-height:1.08;font-weight:600;margin:6px 0 8px;letter-spacing:-.022em;text-wrap:balance}
+#rname{font-size:30px;line-height:1.08;font-weight:600;margin:0;letter-spacing:-.022em;text-wrap:balance}
 .dims{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
 #imgs{grid-column:2;display:grid;gap:8px;align-content:start}
 #imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:10px;cursor:zoom-in}
@@ -109,7 +109,7 @@ body.fs #stage{position:fixed;inset:0;height:auto;z-index:15}body.fs #lvw,body.f
  </div>
  <div id="rooms"></div>
  <div id="right">
-  <div class="hd"><div id="ren"></div><div id="rname"></div><div class="dims" id="dims"></div></div>
+  <div class="hd"><div id="ren" hidden></div><div id="rname"></div><div class="dims" id="dims" hidden></div></div>
   <div id="imgs"></div>
   <div class="body">
    <div class="fld"><label for="owner">Whose room</label><input type="text" id="owner" placeholder="Name"></div>
