@@ -4167,7 +4167,7 @@ $('cutR').onclick=()=>{cut={h:36,s:68,e:51};['cutH','cutS','cutE'].forEach((id,i
 {let h='<a data-id="_house"><span>Whole house</span></a>';[1,2,0].forEach(l=>{ROOMS.filter(r=>r.level===l).forEach(r=>{h+='<a data-id="'+r.id+'"><span>'+r.name+'</span><small></small></a>'})});$('rooms').innerHTML=h;
  $('rooms').querySelectorAll('a').forEach(a=>a.onclick=()=>{const r=RB[a.dataset.id];select(r);goRoom(r);$('left').classList.remove('open')})}
 /* levels + walls down */
-let lvl='all',wd=false;const LVF={0:155,1:164.73,2:175.96},LVC={0:163.3,1:174.28,2:185.0};
+let lvl='all',wd=false;const LVF={0:155,1:164.73,2:175.96},LVC={0:163.15,1:174.15,2:184.85};
 function syncLvl(){$('bLv').textContent=LBL[lvl];document.querySelectorAll('#lv button[data-l]').forEach(b=>b.classList.toggle('on',String(lvl)===b.dataset.l));$('bWD').classList.toggle('on',wd);
  document.querySelectorAll('#rooms a').forEach(a=>{const r=RB[a.dataset.id];a.style.display=(lvl==='all'||r.id==='_house'||r.level===lvl)?'':'none'})}
 function setLevel(n,noFly){lvl=n;setInside(false);
